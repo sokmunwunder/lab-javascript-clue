@@ -110,28 +110,15 @@ function selectRandom (someArray){
  
 function pickMystery (){
    let threeClues = {};
-   let weaponsClue = selectRandom (weaponsArray);
+   let weaponsClue = selectRandom(weaponsArray);
     let roomsClue = selectRandom(roomsArray);
    let suspectClue= selectRandom(suspectsArray);
+  threeClues["suspect"] = suspectClue;
+  threeClues["room"] = roomsClue;
+  threeClues["weapon"] = weaponsClue;
 
-   
-  threeClues["Suspect"] = suspectClue;
-  threeClues["Room"] = roomsClue;
-  threeClues["Weapons"] = weaponsClue;
+  
   return threeClues;}
-
-    
-//threeClues.push(roomsClue);
-//threeClues.push(suspectClue);
-//threeClues.push(weaponsClue);
-  //return threeClues;
-
-
-
-
-
-
-
 
 
 // ITERATION 3
