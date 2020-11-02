@@ -109,21 +109,24 @@ function selectRandom (someArray){
 }
  
 function pickMystery (){
-    let threeClues = [];
-  if (threeClues.length === null){return [];}
-  else{
-    let weaponsClue = selectRandom (weaponsArray);
- //return weaponsClue;
-let roomsClue = selectRandom(roomsArray);
-//return roomsClue;
-let suspectClue= selectRandom(suspectsArray);
-//return suspectsClue;
-threeClues.push(roomsClue);
-threeClues.push(suspectClue);
-threeClues.push(weaponsClue);
-//console.log(threeClues);
+   let threeClues = {};
+   let weaponsClue = selectRandom (weaponsArray);
+    let roomsClue = selectRandom(roomsArray);
+   let suspectClue= selectRandom(suspectsArray);
+
+   
+  threeClues["Suspect"] = suspectClue;
+  threeClues["Room"] = roomsClue;
+  threeClues["Weapons"] = weaponsClue;
   return threeClues;}
-}
+
+    
+//threeClues.push(roomsClue);
+//threeClues.push(suspectClue);
+//threeClues.push(weaponsClue);
+  //return threeClues;
+
+
 
 
 
