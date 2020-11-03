@@ -120,12 +120,11 @@ function pickMystery (){
 
 
 // ITERATION 3
-function revealMystery (){
-let envelope = pickMystery();
+function revealMystery (envelope){
 let suspectFirstName= envelope.suspect.firstName;
 let suspectLastName= envelope.suspect.lastName; 
 let weaponFound=envelope.weapon.name;
 let roomHappened=envelope.room.name;
 
-return `"${suspectFirstName} ${suspectLastName} killed Mr. Boddy using the ${weaponFound} in the ${roomHappened}!"`;    
+return `${suspectFirstName} ${suspectLastName} killed Mr. Boddy using the ${weaponFound} in the ${roomHappened}!`;    
 }
