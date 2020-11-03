@@ -121,12 +121,11 @@ function pickMystery (){
 
 // ITERATION 3
 function revealMystery (){
-    let threeClues = {};
-   let weaponsClue = selectRandom(weaponsArray);
-    let roomsClue = selectRandom(roomsArray);
-   let suspectClue= selectRandom(suspectsArray);
-  threeClues["suspect"] = suspectClue;
-  threeClues["room"] = roomsClue;
-  threeClues["weapon"] = weaponsClue;
-    return `${threeClues.suspect.firstName} ${threeClues.suspect.lastName} killed Mr. Boddy using ${threeClues.weapon} in the ${threeClues.room}`;    
+let envelope = pickMystery();
+let suspectFirstName= envelope.suspect.firstName;
+let suspectLastName= envelope.suspect.lastName; 
+let weaponFound=envelope.weapon.name;
+let roomHappened=envelope.room.name;
+
+    return `"${suspectFirstName} ${suspectLastName} killed Mr. Boddy using the ${weaponFound} in the ${roomHappened}!"`;    
 }
